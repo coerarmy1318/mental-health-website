@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MindQuest Dashboard</title>
+
+<link rel="stylesheet" href="index.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<h1>🎮 MindQuest Dashboard</h1>
+
+<p>Complete challenges to gain XP!</p>
+
+
+<h2>Daily Challenges</h2>
+
+<div class="card">
+
+<h3>🧘 Breathing Exercise</h3>
+
+<p>Take 5 deep breaths</p>
+
+<button onclick="completeQuest(10)">Complete</button>
+
+</div>
+
+
+<div class="card">
+
+<h3>📓 Gratitude Journal</h3>
+
+<p>Write 3 things you're grateful for</p>
+
+<button onclick="completeQuest(15)">Complete</button>
+
+</div>
+
+
+<h2>Your Progress</h2>
+
+<p>Level: <span id="level">1</span></p>
+<p>XP: <span id="xp">0</span></p>
+
+<div class="bar-container">
+<div id="progressBar"></div>
+</div>
+
+
+<h2>Badges</h2>
+
+<p id="badge1">🔒 First Quest</p>
+<p id="badge2">🔒 Level 3 Player</p>
+
+
+<h2>Mood Tracker</h2>
+
+<button onclick="logMood(1)">😞</button>
+<button onclick="logMood(2)">😐</button>
+<button onclick="logMood(3)">🙂</button>
+<button onclick="logMood(4)">😄</button>
+
+<canvas id="moodChart"></canvas>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

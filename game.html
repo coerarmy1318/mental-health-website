@@ -1,0 +1,74 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MindQuest Login</title>
+
+<link rel="stylesheet" href="index.css">
+
+<style>
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:linear-gradient(135deg,#2b0a4a,#4c1d95);
+font-family:'Segoe UI',sans-serif;
+color:white;
+}
+
+.auth-box{
+background:rgba(0,0,0,0.6);
+padding:40px;
+border-radius:20px;
+width:320px;
+text-align:center;
+}
+
+.auth-box input{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+}
+
+.auth-box button{
+width:100%;
+padding:10px;
+background:#a855f7;
+border:none;
+border-radius:10px;
+color:white;
+cursor:pointer;
+}
+
+.switch{
+margin-top:10px;
+cursor:pointer;
+color:#c084fc;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="auth-box">
+
+<h2 id="formTitle">Login</h2>
+
+<input type="text" id="username" placeholder="Username">
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<p class="switch" onclick="toggleForm()">Don't have an account? Sign up</p>
+
+</div>
+
+<script src="auth.js"></script>
+
+</body>
+</html>

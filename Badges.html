@@ -1,0 +1,36 @@
+<h1>🏆 Achievements</h1>
+
+<div id="badgeArea"></div>
+
+<script src="script.js"></script>
+
+<script>
+
+let area = document.getElementById("badgeArea");
+
+function showBadges(){
+
+area.innerHTML = "";
+
+if(player.badges.includes("first")){
+area.innerHTML += "<p>🏆 First Quest Completed</p>";
+}
+
+if(player.badges.includes("level3")){
+area.innerHTML += "<p>🏆 Reached Level 3</p>";
+}
+
+if(player.badges.length === 0){
+area.innerHTML = "<p>No badges yet. Complete challenges!</p>";
+}
+
+}
+
+showBadges();
+
+</script>
+<h1>🏆 Achievements</h1>
+
+<div id="badgeArea"></div>
+
+<script src="script.js"></script>

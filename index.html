@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MindQuest</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<script src="script.js"></script>
+<body>
+
+<div id="loginScreen">
+    <h1>🎮 MindQuest</h1>
+    <input type="text" id="username" placeholder="Enter username">
+    <button onclick="login()">Start Game</button>
+    <nav class="navbar">
+    <div class="logo">🌙 MindQuest</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="challenges.html">Challenges</a></li>
+        <li><a href="Badges.html">Badges</a></li>
+        <li><a href="mood.html">Mood Chart</a></li>
+        <li><a href="profile.html">Profile</a></li>
+    </ul>
+</nav>
+<section class="hero">
+    <div class="hero-overlay">
+        <h1>Level Up Your Mind 🌙</h1>
+        <p>Track your mood. Complete challenges. Unlock your best self.</p>
+        <a href="game.html">
+<button class="cta-button">Start Your Journey 🎮</button>
+</a>
+    </div>
+</section>
+</div>
+
+<div class="progress">
+    <div class="bar-container">
+        <div id="progressBar"></div>
+    </div>
+</div>
+
+
+<div id="app" class="hidden">
+
+    <header>
+        <h1>🌙 MindQuest</h1>
+        <p id="welcome"></p>
+    </header>
+
+    <div class="card">
+        <h2>How are you feeling today?</h2>
+        <button onclick="addMood('Happy', 10)"> Happy</button>
+        <button onclick="addMood('Okay', 5)">Okay</button>
+        <button onclick="addMood('Low', 3)"> Low</button>
+    </div>
+
+    <div class="card">
+        <h4>🏆 Badges</h4>
+    <div id="badges"></div>
+    </div>
+
+    <div class="card">
+        <h2>📊 Mood Chart</h2>
+        <canvas id="moodChart"></canvas>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+<h1>📊 Mood Tracker</h1>
+
+<p>How do you feel today?</p>
+
+<button onclick="logMood(1)">😞</button>
+<button onclick="logMood(2)">😐</button>
+<button onclick="logMood(3)">🙂</button>
+<button onclick="logMood(4)">😄</button>
+
+<canvas id="moodChart"></canvas>
+
+<script src="script.js"></script>
+
+<script>
+
+function logMood(mood){
+
+player.moodHistory.push(mood);
+
+addXP(5);
+
+saveGame();
+
+drawChart();
+
+}
+
+function drawChart(){
+
+let ctx = document.getElementById("moodChart");
+
+new Chart(ctx,{
+type:"line",
+data:{
+labels: player.moodHistory.map((_,i)=>"Day "+(i+1)),
+datasets:[{
+label:"Mood",
+data:player.moodHistory
+}]
+}
+});
+
+}
+
+drawChart();
+
+</script>

@@ -1,0 +1,40 @@
+<h1>👤 Player Profile</h1>
+
+<p>Username: <span id="username"></span></p>
+<p>Level: <span id="level"></span></p>
+<p>XP: <span id="xp"></span></p>
+
+<button onclick="resetGame()">Reset Progress</button>
+
+<script src="script.js"></script>
+
+<script>
+
+document.getElementById("username").innerText = player.username;
+
+updateStats();
+
+function resetGame(){
+
+localStorage.removeItem("mindquest");
+
+location.reload();
+
+}
+
+</script>
+<h1>👤 Player Profile</h1>
+
+<div class="profile-box">
+
+<p>Username: <span id="username"></span></p>
+
+<p>Level: <span id="level"></span></p>
+
+<p>XP: <span id="xp"></span></p>
+
+<button onclick="resetGame()">Reset Progress</button>
+
+</div>
+
+<script src="script.js"></script>
